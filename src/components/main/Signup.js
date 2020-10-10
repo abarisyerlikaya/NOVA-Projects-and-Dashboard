@@ -2,7 +2,7 @@
 
 // Libraries
 import React, { Component } from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Row, Col } from "reactstrap";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import alertify from "alertifyjs";
 

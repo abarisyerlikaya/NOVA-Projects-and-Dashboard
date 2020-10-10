@@ -8,8 +8,8 @@ import { Navbar, NavbarBrand } from "reactstrap";
 const Navi = (props) => {
   return (
     <div>
-      <Navbar color="dark" light expand="md" className="px-5">
-        <NavbarBrand className="px-5 text-light" href="/">
+      <Navbar color="dark" light className="justify-content-between">
+        <NavbarBrand className="text-light" href="/">
           NOVA Projects & Dashboard
         </NavbarBrand>
       </Navbar>
