@@ -61,6 +61,10 @@ export default class LoginForm extends Component {
                     Login
                   </Button>
                 </FormGroup>
+
+                <FormGroup className="mx-auto">
+                  Not a member? <a href="/" className="text-decoration-none text-info">Click to sign up.</a>
+                </FormGroup>
               </Form>
             </Col>
           </Row>
