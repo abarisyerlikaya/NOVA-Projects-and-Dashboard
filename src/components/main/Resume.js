@@ -16,7 +16,7 @@ export default class Resume extends Component {
           <section>
             You could manage your projects here. We provide the opportunity to see your project reports, analyze the
             project data, schedule tasks and check the stats via dashboard. You can also select excel files from your
-            files and preview it on the projects page. If you don't have an account, sign up to get started. You will be
+            disk and preview it on the projects page. If you don't have an account, sign up to get started. You will be
             able to access the dashboard after login.
           </section>
         </Col>
