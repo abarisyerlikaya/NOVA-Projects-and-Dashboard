@@ -80,8 +80,8 @@ export default class Content extends Component {
             <Col xs="8" className="border py-4 bg-light">
               <Row>
                 <Col>
-                  <h6 className="float-left">TASKS</h6>
-                  <br />
+                  <h6 className="float-left">PROJECT TASKS</h6>
+                  <br/>
                   <p className="float-left">
                     <strong>107</strong> tasks completed out of 195.
                   </p>
