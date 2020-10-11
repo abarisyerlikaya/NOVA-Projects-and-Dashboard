@@ -3,6 +3,7 @@
 // Libraries
 import React, { Component } from "react";
 import { Container, Row, Col, Input, Table } from "reactstrap";
+import alertify from "alertifyjs";
 import readXlsxFile from "read-excel-file";
 
 // Content class
@@ -13,12 +14,17 @@ export default class Content extends Component {
     rows: [[]],
   };
 
-  // Saves the file which user selected to state
+  // Saves the user selected file to state
   saveFile = async (event) => {
-    this.setState({ fileName: event.target.files[0].name, projectId: Date.now() });
-    readXlsxFile(event.target.files[0]).then((rows) => {
-      this.setState({ rows: rows });
-    });
+    const file = event.target.files[0];
+    if (file.name.endsWith(".xlsx")) {
+      this.setState({ fileName: file.name, projectId: Date.now() });
+      readXlsxFile(file).then((rows) => {
+        this.setState({ rows: rows });
+      });
+    } else {
+      alertify.error("File could not be read. Please select a file with '.xlsx' format.")
+    }
   };
 
   render() {
@@ -55,12 +61,12 @@ export default class Content extends Component {
             <Col xs="3">
               <h6>Input Report</h6>
             </Col>
-            
+
             <Col xs="6">
               <Table bordered striped size="sm" id="table">
                 <thead>
                   <tr>
-                    {this.state.rows[0].map((col, index) => (
+                    {this.state.rows[0].slice(0,2).map((col, index) => (
                       <th>{col}</th>
                     ))}
                   </tr>
@@ -68,7 +74,7 @@ export default class Content extends Component {
                 <tbody>
                   {this.state.rows.map((row, index) => (
                     <tr>
-                      {row.map((col, index) => (
+                      {row.slice(0,2).map((col, index) => (
                         <td>{col}</td>
                       ))}
                     </tr>
