@@ -9,6 +9,9 @@ import Login from "./components/login/Login";
 import Dashboard from "./components/dashboard/Dashboard";
 import Projects from "./components/projects/Projects";
 
+// Styles
+import "./App.css";
+
 function isLoggedIn() {
   if (Cookies.get("logged_user")) return true;
   else return false;

@@ -22,7 +22,7 @@ export default class ContactUs extends Component {
           <Col md="3" className="my-2">
             <a href="mailto:abarisyerlikaya@gmail.com">
               <Button outline color="info" className="float-right mr-lg-2 mr-md-0 w-100">
-                <h6>Send E-Mail</h6>
+                <h6 className="pt-2">Send E-Mail</h6>
                 <h2>
                   <FontAwesomeIcon icon={faEnvelope} />
                 </h2>
@@ -34,7 +34,7 @@ export default class ContactUs extends Component {
           <Col md="3" className="my-2">
             <a href="tel:+905061474839">
               <Button outline color="info" className="float-left ml-lg-2 ml-md-0 w-100">
-                <h6>Call Us</h6>
+                <h6 className="pt-2">Call Us</h6>
                 <h2>
                   <FontAwesomeIcon icon={faPhone} />
                 </h2>

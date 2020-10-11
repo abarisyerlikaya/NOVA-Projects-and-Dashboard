@@ -55,7 +55,7 @@ export default class Signup extends Component {
         <Col xs="12" sm="9" md="6" lg="4" className="mx-auto border rounded">
           {/* Signup */}
           <Row className="mb-3">
-            <Col className="rounded bg-dark text-white text-center py-2">
+            <Col className="rounded bg-dark text-white text-center pb-2 pt-3">
               <h5>Signup for Free</h5>
             </Col>
           </Row>

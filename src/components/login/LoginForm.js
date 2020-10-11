@@ -23,8 +23,7 @@ export default class LoginForm extends Component {
   // Checks if user entered valid name & e-mail combination or not
   checkCredentials = () => {
     const user = localStorage.getItem(this.state.email);
-    console.log(user);
-    if (user && user.split('"')[3] === this.state.name) return true;
+    if (user && JSON.parse(user).name === this.state.name) return true;
     else return false;
   };
 
@@ -63,7 +62,10 @@ export default class LoginForm extends Component {
                 </FormGroup>
 
                 <FormGroup className="mx-auto">
-                  Not a member? <a href="/" className="text-decoration-none text-info">Click to sign up.</a>
+                  Not a member?{" "}
+                  <a href="/" className="text-decoration-none text-info">
+                    Click to sign up.
+                  </a>
                 </FormGroup>
               </Form>
             </Col>
